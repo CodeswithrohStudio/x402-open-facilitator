@@ -18,4 +18,4 @@ app.use((req, res, next) => {
 
 createExpressAdapter(facilitator, app, "/facilitator");
 
-app.listen(4101, () => console.log("Node HTTP on http://localhost:4101"));
+app.listen(process.env.PORT || 4101, () => console.log(`Node HTTP on http://localhost:${process.env.PORT || 4101}`));
